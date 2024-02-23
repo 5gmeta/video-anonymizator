@@ -1,0 +1,8 @@
+go to src/
+```
+$ docker build -t image-anonymizator .
+```
+run docker with environment variables AMQP_IP=YOUR_LOCAL_IP :
+```
+docker run -e AMQP_USER=5gmeta-user -e AMQP_PASS=5gmeta-password -e  AMQP_IP=192.168.10.9 -e AMQP_PORT=5673 -e TOPIC_READ=image -e TOPIC_WRITE=image_anonym -e INSTANCE_TYPE=small -ti image-anonymizator
+```
